@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cats"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Mykola <nchernov@gmail.com>"]
 readme = "README.md"
