@@ -1,0 +1,6 @@
+.venv/
+.vscode/
+.git/
+.gitignore
+/poetry.toml
+/build.sh
