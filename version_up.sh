@@ -28,11 +28,6 @@ git pull
 # Update the version in the pyproject.toml file
 poetry version $1
 new_version=$(poetry version -s)
-npm version --no-git-tag-version $new_version
-
-# Build UI
-yarn
-yarn build
 
 # Commit the change
 git commit -am v${new_version}
