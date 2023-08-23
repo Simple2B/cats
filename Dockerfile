@@ -17,11 +17,11 @@ RUN poetry install --no-dev
 # copy project
 COPY . .
 
-# install uvicorn
-RUN poetry add uvicorn
+# install gunicorn
+RUN poetry add gunicorn
 
 # expose port
 EXPOSE 8000
 
-# run uvicorn
-CMD ["poetry", "run", "uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# run gunicorn
+CMD ["poetry", "run", "gunicorn", "-w", "4", "-b", "0.0.0.0", "main:app"]
